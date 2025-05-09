@@ -49,6 +49,7 @@
 ###
   Al iniciar el proyecto, en la terminal se nos muestran las distintas rutas disponibles a partir de la url raiz (http://localhost:3000), las rutas disponibles en este caso son las siguientes:
 - `http://localhost:3000/` mediante metodo GET
+- `http://localhost:3000/categoria/` mediante metodo GET
 - `http://localhost:3000/categoria/[id]` mediante metodo GET
 
 Para realizar las pruebas a estos endpoints, la herramienta mas conocida es Postman, la cual ofrece una amigable interfaz de usuario para realizar estas solicitudes.
@@ -80,6 +81,9 @@ El endpoint que importa es `http://localhost:3000/categoria/[id]`, puesto que re
 
 Por ende, si por ejemplo accedemos a la URL "http://localhost:3000/categoria/3", obtenemos la Fila correspondiente al id numero 3, en formato JSON.<br/>
   `{"id": 3,"nombre": "Motor"}`<br/>
+  Si se accede a la URL sin definir un parametro, el sistema entregara una lista con todas las filas de la tabla.<br/>
+  `[{"id": 1,"nombre": "Neumáticos"},{"id": 2,"nombre": "Chasis"}, ...]`
+  <br/>
   Otra manera de porbar los endpoints, es mediante cURL, que consiste en utilizar el comando `curl` en la terminal de comandos, la sintaxis es la siguiente:<br/>
 
 >curl [url]
